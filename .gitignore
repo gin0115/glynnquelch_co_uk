@@ -1,1 +1,47 @@
-wp-config.php
+# Local files
+.DS_Store
+.thumbsdb
+.svn
+init.sh
+templates/*
+sublime-*
+sftp-*.json
+node_modules
+.svn
+yarn-error.log
+.sass-cache/
+*.sass-cache*
+**/.DS_Store
+__MACOSX/
+**/__MACOSX/
+debug.log
+.cache/
+.vscode/
+
+# Project files
+.idea/
+*.sublime-*
+sftp-*.json
+
+# Theme and Plugin handling
+#
+# Ignore the parent, but explicitly exclude (from ignore)
+# any themes or plugins we wish to source control.
+#
+# example exclusion:
+#
+# !plugins/jetpack
+# !mu-plugins/hello.php
+# !themes/twentyseventeen
+#
+plugins/*
+plugins_/*
+
+
+themes/*
+!themes/amigawp-wordpress-theme-master
+
+
+# Other wp-content exclusions
+upgrade/*
+uploads/*
