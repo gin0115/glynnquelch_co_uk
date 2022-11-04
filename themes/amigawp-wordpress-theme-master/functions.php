@@ -7,6 +7,9 @@
  * @package Amigawp
  */
 
+// Load blocks
+require plugin_dir_path( __FILE__ ) . 'build/blocks/wimp-window/index.php';
+
 if ( ! function_exists( 'amigawp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -43,27 +46,38 @@ if ( ! function_exists( 'amigawp_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'amigawp' ),
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary', 'amigawp' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'amigawp_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'amigawp_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -73,12 +87,15 @@ if ( ! function_exists( 'amigawp_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'amigawp_setup' );
@@ -101,15 +118,17 @@ add_action( 'after_setup_theme', 'amigawp_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function amigawp_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'amigawp' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'amigawp' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar', 'amigawp' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Add widgets here.', 'amigawp' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'amigawp_widgets_init' );
 
@@ -157,14 +176,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 function amigawp_register_more_stylesheets() {
-    wp_register_style( 'stylesheet_name', get_stylesheet_directory_uri() . '/layouts/404.css' );
+	wp_register_style( 'stylesheet_name', get_stylesheet_directory_uri() . '/layouts/404.css' );
 }
 add_action( 'init', 'amigawp_register_more_stylesheets' );
 
 function amigawp_conditionally_enqueue_my_stylesheet() {
-    // only enqueue on product-services page slug
-    if ( is_404() ) {
-        wp_enqueue_style( 'stylesheet_name' );
-    }
+	// only enqueue on product-services page slug
+	if ( is_404() ) {
+		wp_enqueue_style( 'stylesheet_name' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'amigawp_conditionally_enqueue_my_stylesheet' );
+
+

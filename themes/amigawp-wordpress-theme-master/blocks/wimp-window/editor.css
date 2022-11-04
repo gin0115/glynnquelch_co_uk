@@ -1,0 +1,120 @@
+/**
+ * Note that these styles are loaded *after* common styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+
+.wimp-window-container {
+    flex: 1 1 80em;
+    padding: 0 2px;
+    border-top: 2px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #000;
+    position: relative;
+    height: 100%;
+    font-family: amiga2, courier, monospaced;
+    background: #adaaad;
+    font-size: 16px;
+    color: #000;
+}
+
+.wimp-window-title {
+    border-bottom: 2px solid #000;
+    color: #000;
+    display: flex;
+    margin-top: 0;
+    position: relative;
+    left: -3px;
+    padding: 0 2px;
+    margin: 0 -6px 0 0px;
+    font-family: amiga2, courier, monospaced;
+    background: #adaaad;
+    font-size: 16px;
+    color: #000;
+}
+
+.square {
+    border-right: 1px solid #000;
+    padding: 4px 7px 0;
+}
+
+.square::before {
+    content: " ❚ ";
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 9px;
+    line-height: 7px;
+    height: 10px;
+    width: 4px;
+    text-indent: 0px;
+    padding: 0px;
+    background: rgb(0, 0, 0);
+}
+
+.windowTitle {
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+}
+
+.windowTitle h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.windowLines {
+    display: none;
+}
+
+.windowIcons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-left: auto;
+    border-left: 1px solid #000;
+    border-bottom: none;
+    width: 25px;
+}
+
+.winSep::before {
+    content: "";
+    display: block;
+    border-right: 1px solid #fff;
+    float: left;
+    width: 1px;
+    height: 18px;
+}
+
+.winIconTwo {
+    background: #aaa;
+    border: 2px solid #000;
+    display: block;
+    width: 13px;
+    height: 10px;
+    margin: 2px;
+    position: relative;
+    left: -5px;
+}
+
+.winIconTwo::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #000;
+    background: #fff;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.winIconTwo::after {
+    content: "";
+    padding: 5px;
+    display: block;
+    width: 2px;
+    height: 20px;
+}
