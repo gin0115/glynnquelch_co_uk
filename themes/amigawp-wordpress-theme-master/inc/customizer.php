@@ -215,6 +215,8 @@ function amigawp_style_selection() {
 	} else {
 		wp_enqueue_style( 'workbench-style-two', get_template_directory_uri() . '/layouts/two.css', AMIGAWP_VERSION ); // enqueueing the required CSS code
 	}
+	// Enqueue the defaults for the theme
+	wp_enqueue_style( 'amigawp-style-shared', get_template_directory_uri() . '/layouts/style.css', array(), AMIGAWP_VERSION ); // enqueueing the required CSS code
 }
 
 

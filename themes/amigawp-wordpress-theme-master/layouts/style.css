@@ -1,0 +1,14 @@
+.widget-area .wimp-window-container .has-nested-images.widget-links {
+    margin: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .widget-area .wimp-window-container .has-nested-images.widget-links {
+        flex-grow: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .widget-area .wimp-window-container .has-nested-images.widget-links .wp-block-image {
+        width: 49% !important;
+    }
+}
