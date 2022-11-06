@@ -26,12 +26,12 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 		</main><!-- #main -->
-<?php /**
+
 		<span class="resizeIcon">
 			<span class="boxOne"></span>
 			<span class="boxTwo"></span>
 		</span>
-*/ ?>
+
 	</div><!-- #primary -->
 <?php
 get_sidebar();
