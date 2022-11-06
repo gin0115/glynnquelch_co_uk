@@ -211,9 +211,9 @@ function amigawp_style_selection() {
 
 	// If the user has selected a color scheme, use that. Otherwise, use the default.
 	if ( $color_scheme == '1' ) {
-		wp_enqueue_style( 'workbench-style-one', get_template_directory_uri() . '/layouts/one.css' ); // enqueueing the required CSS code
+		wp_enqueue_style( 'workbench-style-one', get_template_directory_uri() . '/layouts/one.css', AMIGAWP_VERSION ); // enqueueing the required CSS code
 	} else {
-		wp_enqueue_style( 'workbench-style-two', get_template_directory_uri() . '/layouts/two.css' ); // enqueueing the required CSS code
+		wp_enqueue_style( 'workbench-style-two', get_template_directory_uri() . '/layouts/two.css', AMIGAWP_VERSION ); // enqueueing the required CSS code
 	}
 }
 
@@ -259,16 +259,6 @@ function amigawp_customizer_css() {
 	</style>
 		<?php
 	}
-
-	?>
-		<script type="text/javascript">
-		function setCookie(cname, cvalue, exdays) {
-var d = new Date();
-d.setTime(d.getTime() + (exdays*24*60*60*1000));
-var expires = "expires="+d.toUTCString();
-document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";}
-	</script>
-	<?php
 }
 
 add_action( 'wp_head', 'amigawp_customizer_css' );

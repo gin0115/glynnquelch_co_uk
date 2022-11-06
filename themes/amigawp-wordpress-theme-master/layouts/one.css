@@ -185,6 +185,7 @@ hr {
 .windowTitle h1,
 .windowTitle h2 {
     color: #0055ad;
+    padding-right: 4px;
 }
 
 .windowIcons {
@@ -601,7 +602,8 @@ div.nav-next a:after {
         display: block;
     }
     #secondary {
-        margin-top: 30px;
+        margin-top: 20px;
+        padding: 0;
     }
     .precomment {
         display: block;
