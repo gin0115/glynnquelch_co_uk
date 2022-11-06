@@ -31,7 +31,10 @@ const Save = (props) => {
 						<InnerBlocks.Content />
 					</div>
 				</div>
-
+				<span class="resizeIcon">
+					<span class="boxOne"></span>
+					<span class="boxTwo"></span>
+				</span>
 			</div>
 		</div>
 	);

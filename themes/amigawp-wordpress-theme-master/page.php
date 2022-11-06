@@ -31,6 +31,10 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+		<span class="resizeIcon">
+			<span class="boxOne"></span>
+			<span class="boxTwo"></span>
+		</span>
 	</div><!-- #primary -->
 
 <?php

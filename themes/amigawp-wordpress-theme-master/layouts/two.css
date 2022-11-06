@@ -207,17 +207,18 @@ hr {
 }
 
 .square:before {
-    content: " ❚ ";
+    content: "";
     padding: 0;
     display: block;
-    color: #fff;
-    background: #000;
+    color: black;
     display: block;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 7px;
     height: 10px;
-    width: 4px;
+    width: 10px;
     text-indent: 0px;
+    font-weight: bolder;
+    border: 2px solid black;
 }
 
 .winBar .windowTitle {
@@ -458,16 +459,28 @@ select,
     margin: 0;
 }
 
+.disks-widget,
 .disks {
     width: 200px;
     text-align: center;
     margin: auto;
 }
 
+.disks-widget {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.disks-widget p {
+    margin-bottom: 20px;
+}
+
 .disks p {
     margin-bottom: 40px;
 }
 
+.disks-widget a,
 .disks a {
     display: block;
     width: auto;
@@ -478,6 +491,7 @@ select,
     background-position: center;
 }
 
+.disks-widget a:hover,
 .disks a:hover {
     display: block;
     width: auto;

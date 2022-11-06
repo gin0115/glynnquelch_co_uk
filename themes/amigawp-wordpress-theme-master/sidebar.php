@@ -13,7 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 <aside id="secondary" class="widget-area">
 	<div class="disks">
 		<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Homepage</a></p>
-		<p><a href="<?php echo esc_url( get_permalink( get_page_by_title( 'All Posts' ) ) ); ?>"><?php esc_html_e( 'All Posts', 'amigawp' ); ?></a></p>
+		<p><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>"><?php esc_html_e( 'All Posts', 'amigawp' ); ?></a></p>
 	</div>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </aside><!-- #secondary -->

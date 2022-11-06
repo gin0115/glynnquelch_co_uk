@@ -56,7 +56,10 @@ const Edit = (props) => {
 							<InnerBlocks />
 						</div>
 					</div>
-
+					<span class="resizeIcon">
+						<span class="boxOne"></span>
+						<span class="boxTwo"></span>
+					</span>
 				</div>
 			</div>
 		</div>
