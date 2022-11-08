@@ -1,22 +1,22 @@
 {
-    "$schema": "https://json.schemastore.org/block.json",
-    "apiVersion": 2,
-    "name": "amigawp/wimp-window-wrapper",
-    "title": "Wimp Window (Container)",
-    "textdomain": "amigawp",
-    "icon": "table-row-after",
-    "category": "layout",
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "amigawp/wimp-window-wrapper",
+  "title": "Wimp Window (Container)",
+  "textdomain": "amigawp",
+  "icon": "table-row-after",
+  "category": "layout",
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "example": {
     "attributes": {
-        "title": {
-            "type": "string"
-        }
-    },
-    "example": {
-        "attributes": {
-            "content": "Window Title"
-        }
-    },
-    "editorScript": "file:./index.js",
-    "editorStyle": "file:./index.css",
-    "style": "file:./style-index.css"
+      "content": "Window Title"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
 }

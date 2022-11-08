@@ -16,24 +16,34 @@
         "url": "https://github.com/WordPress/gutenberg-examples/issues"
     },
     "devDependencies": {
-        "@wordpress/env": "^4.6.0",
-        "@wordpress/scripts": "^23.0.0",
+        "@wordpress/env": "^4.9.0",
+        "@wordpress/scripts": "^23.7.2",
         "copy-webpack-plugin": "^10.2.4",
         "eslint-plugin-prettier": "^4.0.0"
     },
     "prettier": "@wordpress/prettier-config",
     "scripts": {
-        "start": "wp-scripts start --webpack-copy-php --webpack-src-dir=blocks --output-path=build/blocks",
-        "build": "wp-scripts build --webpack-copy-php --webpack-src-dir=blocks --output-path=build/blocks",
+        "start": "wp-scripts start --webpack-copy-php --webpack-src-dir=js/blocks --output-path=blocks",
+        "build": "wp-scripts build --webpack-copy-php --webpack-src-dir=js/blocks --output-path=blocks",
         "lint:js": "wp-scripts lint-js",
         "lint:style": "wp-scripts lint-style",
         "format:js": "wp-scripts format",
         "lint:js:fix": "npm run lint:js -- --fix",
         "lint:pkg-json": "wp-scripts lint-pkg-json",
         "test": "wp-scripts test-unit-js",
+        "test-e2e": "wp-scripts test-e2e",
+        "test-e2e:debug": "wp-scripts --inspect-brk test-e2e --puppeteer-devtools",
+        "test-e2e:watch": "npm run test-e2e -- --watch",
         "env:start": "wp-env start",
         "env:start:debug": "wp-env start --xdebug",
         "env:stop": "wp-env stop",
         "packages-update": "wp-scripts packages-update"
+    },
+    "dependencies": {
+        "@wordpress/e2e-test-utils": "^8.5.0",
+        "@wordpress/jest-console": "^6.4.0",
+        "@wordpress/jest-puppeteer-axe": "^5.4.0",
+        "expect-puppeteer": "^6.1.1",
+        "puppeteer-testing-library": "^0.6.0"
     }
 }
